@@ -13,7 +13,7 @@ char *code(char process[])
         cascii[i] = ascii[i] + length;
         while (cascii[i] > 126)
         {
-            cascii[i] -= 126;
+            cascii[i] -= 94;
         }
         process[i] = cascii[i];
         
@@ -31,9 +31,9 @@ char *decode(char process[])
         ascii[i] = process[i];
         //start ciphering
         cascii[i] = ascii[i] - length;
-        while (cascii[i] < 0)
+        while (cascii[i] < 32)
         {
-            cascii[i] += 126;
+            cascii[i] += 94;
         }
         process[i] = cascii[i];
     }
@@ -47,6 +47,16 @@ int main()
     // get a text to code
     printf("gimme some text bro -> ");
     scanf("%s", text);
-
-    printf("%s ", code(text));
+//    for (int i = 0; i >= strlen(text); i++)
+    // {
+    //     if (text[i]<32 || text[i] > 126)
+    //     {
+    //         printf("Syntax error");
+    //         break;
+    //     }
+        
+    // }
+    
+    
+    printf("\"%s\"\n", decode(text));
 }
