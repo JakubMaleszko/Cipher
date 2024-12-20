@@ -4,3 +4,6 @@ The old CLI version is in the /oldCliVer directory. The files at the root of the
 VS: 2022 
 
 wxWidgets: 3.2.6 
+
+#
+R;<2y%)6%#!!;XP
